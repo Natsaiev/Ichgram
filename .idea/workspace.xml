@@ -5,51 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2413cb54-1a63-4323-9238-1b4911f66d92" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/controllers/authControllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/arrow_back.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/create.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/create_fill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/explore.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/explore_fill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/home.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/home_fill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/lock.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/login_back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/menu.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/messages.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/messages_fill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/notifications.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/notifications_fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/search.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/search_fill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/smiley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/RegisterForm.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/footerReg.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/registerForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/customItems/customInput/CustomInput.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/customItems/customInput/CustomInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/registerPage/registerPage.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/registerPage/registerPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +135,8 @@
       <workItem from="1736185073548" duration="16000" />
       <workItem from="1736787047639" duration="15011000" />
       <workItem from="1736820408105" duration="1016000" />
+      <workItem from="1736821457109" duration="2196000" />
+      <workItem from="1736823838028" duration="661000" />
     </task>
     <servers />
   </component>
