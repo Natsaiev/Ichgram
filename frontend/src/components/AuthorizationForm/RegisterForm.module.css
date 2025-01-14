@@ -1,0 +1,193 @@
+.container {
+    margin: 30px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 0px 20px;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputReg {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+}
+
+.button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 100%;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.logoH3 {
+    font-size: 23px;
+    color: #737373;
+}
+
+.agreement {
+    p {
+        font-size: 20px;
+        color: #737373;
+        font-weight: 500;
+    }
+
+    a {
+        margin: 0 5px;
+    }
+}
+
+
+@media (max-width: 1440px) {
+    .form {
+        gap: 12px;
+    }
+
+    .inputReg {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 17px;
+    }
+
+    .title {
+        font-size: 23px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .form {
+        gap: 15px;
+    }
+
+    .inputReg {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .form {
+        gap: 15px;
+    }
+
+    .inputReg {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .form {
+        gap: 12px;
+    }
+
+    .inputReg {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .logoH3 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .form {
+        gap: 10px;
+    }
+
+    .inputReg {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .logoH3 {
+        font-size: 18px;
+    }
+}

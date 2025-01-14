@@ -1,0 +1,141 @@
+.registerPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    width: 100%;
+}
+
+.formContainer {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #DBDBDB;
+    max-width: 20%;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 20%;
+    border: 2px solid #DBDBDB;
+}
+
+.footer p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer a {
+    margin: 0 10px;
+}
+
+@media (max-width: 1440px) {
+    .formContainer {
+        padding: 20px;
+        max-width: 30%;
+    }
+
+    .footer {
+        width: 30%;
+        padding: 20px;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .formContainer {
+        padding: 15px;
+        max-width: 40%;
+    }
+
+    .footer {
+        width: 40%;
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .formContainer {
+        padding: 15px;
+        max-width: 50%;
+
+    }
+
+    .footer {
+        width: 50%;
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formContainer {
+        padding: 10px;
+        max-width: 90%;
+        border: none;
+        gap: 0;
+    }
+
+    .footer {
+        width: 90%;
+        padding: 10px;
+        border: none;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .footer a {
+        margin: 0 5px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .formContainer {
+        padding: 8px;
+        max-width: 90%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .footer {
+        width: 90%;
+        padding: 8px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .footer a {
+        margin: 0 4px;
+    }
+}
+
+
