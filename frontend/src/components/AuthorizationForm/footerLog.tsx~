@@ -1,0 +1,11 @@
+const FooterLog = () => {
+    return (
+        <div>
+            <p>Have an account?
+                <a href="/register">Sign up</a>
+            </p>
+        </div>
+    );
+};
+
+export default FooterLog;

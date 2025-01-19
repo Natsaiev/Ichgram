@@ -5,15 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2413cb54-1a63-4323-9238-1b4911f66d92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/controllers/authControllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/api/api.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/footerLog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/loginForm.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/loginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/customItems/OrDivider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/loginPage/loginPage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/loginPage/loginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/authControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/authControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/chunk-REFQX4J5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/chunk-REFQX4J5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/registerForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/registerForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/registerPage/registerPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/registerPage/registerPage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +153,8 @@
       <workItem from="1736787047639" duration="15011000" />
       <workItem from="1736820408105" duration="1016000" />
       <workItem from="1736821457109" duration="2196000" />
-      <workItem from="1736823838028" duration="661000" />
+      <workItem from="1736823838028" duration="2605000" />
+      <workItem from="1737214683518" duration="24056000" />
     </task>
     <servers />
   </component>

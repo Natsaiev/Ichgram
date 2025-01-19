@@ -6,22 +6,23 @@
     gap: 50px;
     height: 100vh;
     width: 100%;
+    /*padding: 10% 0;*/
 }
 
 .formContainer {
     padding: 20px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 1px;
     border: 2px solid #DBDBDB;
     max-width: 20%;
-    width: 100%;
+
 }
 
 .footer {
     display: flex;
     justify-content: center;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 1px;
     padding: 20px;
     width: 20%;
     border: 2px solid #DBDBDB;
@@ -91,6 +92,7 @@
 @media (max-width: 480px) {
     .registerPage {
         gap: 0;
+        justify-content: flex-start;
     }
 
     .formContainer {

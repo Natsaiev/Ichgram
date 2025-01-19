@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    padding-top: 10%;
+    }
+
+.left{
+    width: 25%;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 20%;
+}
+
+.formContainer {
+    padding: 20px;
+    background-color: white;
+    border-radius: 1px;
+    border: 2px solid #DBDBDB;
+
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1px;
+    padding: 20px;
+
+    border: 2px solid #DBDBDB;
+}
+
+.footer p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer a {
+    margin: 0 10px;
+}
+
+.loginImage{
+    width: 100%;
+}

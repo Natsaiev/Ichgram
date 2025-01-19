@@ -1,9 +1,11 @@
 import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 
-
+// Регистрация пользователя
 const registerUser = async (req, res) => {
     const { username, email, fullName, password } = req.body;
+    console.log("Received data for registration:", req.body);
+
     try {
         const userExists = await User.findOne({
             $or: [
@@ -11,38 +13,103 @@ const registerUser = async (req, res) => {
                 { username }
             ]
         });
-        if(userExists) {
-            return res.status(400).json({message: "User already exists"});
+        console.log("User exists:", userExists);
+
+        if (userExists) {
+            return res.status(400).json({ message: "User already exists" });
         }
 
-        const user = await User.create({
+        const newUser = new User({
             username,
             email,
             fullName,
             password
         });
 
-        await user.save();
+        // Сохранение нового пользователя в базе данных
+        await newUser.save();
+        console.log("User saved:", newUser);
 
-        const token = jwt.sign({id: user._id}, process.env.JWT_SECRET, {
+        // Создание токена
+        const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
             expiresIn: '1h',
         });
 
+        // Отправка ответа с токеном и данными пользователя
         res.status(201).json({
             token,
             user: {
-                id: user._id,
-                username: user.username,
-                email: user.email,
-                fullName: user.fullName,
+                id: newUser._id,
+                username: newUser.username,
+                email: newUser.email,
+                fullName: newUser.fullName,
             }
         });
 
     } catch (error) {
         console.log('Error registering user', error);
-        res.status(500).json({message: "Something went wrong"});
+        res.status(500).json({ message: "Something went wrong" });
     }
+};
 
+// Логин пользователя
+const loginUser = async (req, res) => {
+    //
+    console.log(req.body);
+    //
+    const { usernameOrEmail, password } = req.body;
+
+    try {
+        const user = await User.findOne({
+            $or: [
+                { username: usernameOrEmail },
+                { email: usernameOrEmail }
+            ]
+        });
+
+        if (!user || !(await user.matchPassword(password))) {
+            return res.status(401).json({ message: "Invalid credentials" });
+        }
+
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+            expiresIn: '1h',
+        });
+
+        res.status(200).json({
+            token,
+            user: {
+                id: user._id,
+                username: user.username,
+                email: user.email,
+            }
+        });
+
+    } catch (error) {
+        console.log('Error logging in user', error);
+        res.status(500).json({ message: "Something went wrong" });
+    }
 }
 
-export { registerUser };
+export { registerUser, loginUser };
+
+const getUserProfile = async (req, res) => {
+    const userId = req.user.id; //Получаем id пользователя из токена
+
+    try {
+        const user = await User.findById(userId).select("-password"); //Исключаем пароль из ответа
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        res.status(200).json(user:{
+            id: user._id,
+                username: user.username,
+                email: user.email,
+                avatar: user.avatar,
+                fullName: user.fullName,
+                bio: user.bio,
+                postsCount: user.postsCount,
+                followersCount: user.followersCount,
+                followingCount: user.followingCount,me,
+        });
+    }
+}

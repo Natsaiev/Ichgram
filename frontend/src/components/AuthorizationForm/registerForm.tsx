@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "../../assets/logo/logo.svg";
 import styles from "./RegisterForm.module.css";
+import { registerUser } from "../../api/api";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: "",
         fullName: "",
@@ -10,31 +13,31 @@ const RegisterForm = () => {
         password: "",
     });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-            // Добавление дополнительных полей
-        }));
+    const [error, setError] = useState("");
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Form data:", formData);
-        alert(`Registration successful for ${formData.username}!`);
-        // Отправка данных на сервер
+        setError("");
+
+        try {
+            await registerUser(formData);
+            alert(`Registration successful for ${formData.username}!`);
+            navigate("/login");
+        } catch (err: any) {
+            setError(err.response?.data?.message || "Registration failed");
+        }
     };
 
     return (
         <div className={styles.container}>
             <div className={styles.logoReg}>
-                <img
-                    src={logo}
-                    alt="ICHGRAM"/>
+                <img src={logo} alt="ICHGRAM" />
             </div>
-            <h3 className={styles.logoH3}>Sign up to see photos and videos
-                from your friends.</h3>
+            <h3 className={styles.logoH3}>Sign up to see photos and videos from your friends.</h3>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <input
                     type="email"
@@ -67,29 +70,16 @@ const RegisterForm = () => {
                     type="password"
                     name="password"
                     placeholder="Password"
+                    required
                     value={formData.password}
                     onChange={handleChange}
-                    required
                     className={styles.inputReg}
                 />
-                <div className={styles.agreement}>
-                    <p>People who use our service may have uploaded
-                        your contact information to Instagram.
-                        <a href="#">Learn more</a>
-                    </p>
-                    <p>
-                        By signing up, you agree to our
-                        <a href="#">Terms</a>,
-                        <a href="#">Privacy Policy</a>
-                        and
-                        <a href="#">Cookies Policy</a>.
-                    </p>
-                </div>
+                {error && <p className={styles.error}>{error}</p>}
                 <button type="submit" className={styles.button}>Sign up</button>
             </form>
-
         </div>
     );
-}
+};
 
 export default RegisterForm;
