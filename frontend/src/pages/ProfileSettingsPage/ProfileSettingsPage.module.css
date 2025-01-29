@@ -1,0 +1,41 @@
+.profileSettings {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.profileSettings h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profileSettings label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profileSettings input,
+.profileSettings textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profileSettings button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profileSettings button:hover {
+    background-color: #0056b3;
+}

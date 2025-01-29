@@ -1,0 +1,7 @@
+.profilePageContainer {
+    padding: 20px;
+}
+
+.postsContainer {
+    margin-top: 20px;
+}

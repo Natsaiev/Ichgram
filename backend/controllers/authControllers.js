@@ -92,30 +92,4 @@ const loginUser = async (req, res) => {
 
 export { registerUser, loginUser };
 
-const getUserProfile = async (req, res) => {
-    const userId = req.user.id; //Получаем id пользователя из токена
 
-    try {
-        const user = await User.findById(userId).select("-password"); //Исключаем пароль из ответа
-        if (!user) {
-            return res.status(404).json({ message: "User not found" });
-        }
-        res.status(200).json({ user: {
-                id: user._id,
-                username: user.username,
-                email: user.email,
-                avatar: user.avatar,
-                fullName: user.fullName,
-                bio: user.bio,
-                postsCount: user.postsCount,
-                followersCount: user.followersCount,
-                followingCount: user.followingCount,
-            }
-        });
-    } catch (error) {
-        console.log('Error getting user profile', error);
-        res.status(500).json({ message: "Something went wrong" });
-    }
-}
-
-export { getUserProfile };

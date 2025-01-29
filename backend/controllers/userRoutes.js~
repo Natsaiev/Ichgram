@@ -1,0 +1,18 @@
+import User from "../models/User.js";
+
+const getProfile = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id); // Получаем пользователя по ID из токена
+        if (!user) return res.status(404).json({ message: "User not found" });
+
+        res.json({
+            username: user.username,
+            bio: user.bio,
+            avatar: user.avatar,
+            followersCount: user.followersCount,
+            followingCount: user.followingCount
+        });
+    } catch (error) {
+        res.status(500).json({ message: "Internal server error" });
+    }
+};
