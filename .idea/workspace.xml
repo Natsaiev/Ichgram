@@ -5,39 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2413cb54-1a63-4323-9238-1b4911f66d92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/userRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute/ProtectedRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/sideMenu/sideMenu.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/sideMenu/sideMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage/HomePage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage/HomePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ProfileSettingsPage/ProfileSettingsPage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ProfileSettingsPage/ProfileSettingsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EditProfilePage/EditProfilePage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EditProfilePage/EditProfilePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/authControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/authControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/api/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/api.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/create.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/create/create.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/create_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/create/create_fill.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/explore.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/explore/explore.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/explore_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/explore/explore_fill.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/home.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/home/home.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/home_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/home/home_fill.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/messages.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/messages/messages.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/messages_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/messages/messages_fill.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/notifications.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/notifications/notifications.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/notifications_fill.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/notifications/notifications_fill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/search/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/search_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/search/search_fill.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProfileSettingsPage/ProfileSettingsPage.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProfileSettingsPage/ProfileSettingsPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,11 +112,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Ichgram\frontend\src\pages" />
       <recent name="H:\Ichgram\frontend\public" />
       <recent name="H:\Ichgram\frontend\src\assets\notifications" />
       <recent name="H:\Ichgram\frontend\src\assets\messages" />
       <recent name="H:\Ichgram\frontend\src\assets\search" />
-      <recent name="H:\Ichgram\frontend\src\assets\create" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -167,7 +146,7 @@
       <workItem from="1737214683518" duration="25477000" />
       <workItem from="1737378033570" duration="58206000" />
       <workItem from="1738095572001" duration="14074000" />
-      <workItem from="1738177805801" duration="4457000" />
+      <workItem from="1738177805801" duration="23981000" />
     </task>
     <servers />
   </component>

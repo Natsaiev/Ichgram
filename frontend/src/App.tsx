@@ -5,7 +5,7 @@ import ProfilePage from "./pages/profilePage/profilePage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.tsx";
 import Layout from "./components/Layout/Layout.tsx";
 import HomePage from "./pages/HomePage/HomePage";
-
+import EditProfilePage from "./pages/EditProfilePage/EditProfilePage.tsx";
 
 function App() {
     return (
@@ -16,6 +16,7 @@ function App() {
                     <Route element={<Layout />}>
                         <Route index element={<HomePage />} />
                         <Route path="profile" element={<ProfilePage />} />
+                        <Route path="edit-profile" element={<EditProfilePage />} />
                     </Route>
                 </Route>
 

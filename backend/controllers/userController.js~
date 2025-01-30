@@ -2,9 +2,13 @@ import User from "../models/User.js";
 
 const getProfile = async (req, res) => {
     try {
-        console.log("Получен запрос на профиль от пользователя:", req.user?._id);
+        console.log("Получен запрос на профиль от пользователя:", req.user);
 
-        const user = await User.findById(req.user._id);
+        if (!req.user) {
+            return res.status(401).json({ message: "Unauthorized" });
+        }
+
+        const user = await User.findById(req.user._id).select("-password"); // Получаем пользователя по ID
         if (!user) return res.status(404).json({ message: "User not found" });
 
         res.json({
@@ -15,31 +19,37 @@ const getProfile = async (req, res) => {
             followingCount: user.followingCount
         });
     } catch (error) {
+        console.error("Ошибка при получении профиля:", error);
         res.status(500).json({ message: "Internal server error" });
     }
 };
 
-export default getProfile;
 
 
 const updateProfile = async (req, res) => {
+    const { username, bio, avatar } = req.body;
+    const userId = req.user._id; // Получаем ID пользователя из токена
+
+
+    console.log("🔹 Данные из запроса:", req.body); // Логируем тело запроса
+
     try {
-        const { username, bio, avatar } = req.body;
-        const updatedUser = await User.findByIdAndUpdate(
-            req.user.id,
-            { username, bio, avatar },
-            { new: true }
-        );
+        const user = await User.findById(userId);
 
-        if (!updatedUser) return res.status(404).json({ message: "Пользователь не найден" });
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
 
-        res.json({
-            username: updatedUser.username,
-            bio: updatedUser.bio,
-            avatar: updatedUser.avatar
-        });
+        // Обновляем данные профиля
+        user.username = username || user.username;
+        user.bio = bio || user.bio;
+        user.avatar = avatar || user.avatar;
+
+        await user.save(); // Сохраняем изменения в БД
+
+        res.json({ message: "Profile updated successfully", user });
     } catch (error) {
-        res.status(500).json({ message: "Ошибка при обновлении профиля" });
+        res.status(500).json({ message: "Failed to update profile" });
     }
 };
 

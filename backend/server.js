@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/userRoutes.js";
+import protect from "./middleware/authMiddleware.js";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -11,7 +12,7 @@ const app = express();
 
 const corsOptions = {
     origin: "http://localhost:4000",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };
 
@@ -21,7 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
+app.use("/api/user", protect, userRoutes);
+
+
 
 
 mongoose.connect(process.env.MONGO_URI, {})

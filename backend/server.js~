@@ -4,29 +4,32 @@ import mongoose from "mongoose";
 import cors from "cors";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/userRoutes.js";
+import protect from "./middleware/authMiddleware.js";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// Настройки CORS
+
 const corsOptions = {
-    origin: "http://localhost:4000", // Разрешаем запросы с фронтенда
+    origin: "http://localhost:4000",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };
 
-app.use(express.json()); // Позволяет Express парсить JSON
+app.use(express.json());
 app.use(cors(corsOptions));
-app.use(express.urlencoded({ extended: true })); // Позволяет парсить URL-кодированные данные
+app.use(express.urlencoded({ extended: true }));
 
-// Подключение маршрутов
+
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
+app.use("/api/user", protect, userRoutes);
 
-// Подключение к MongoDB
+
+
+
 mongoose.connect(process.env.MONGO_URI, {})
     .then(() => console.log("Connected to MongoDB"))
     .catch((error) => console.error(" Error connecting to MongoDB:", error));
 
-// Запуск сервера
+
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

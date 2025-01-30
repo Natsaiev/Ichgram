@@ -2,9 +2,13 @@ import User from "../models/User.js";
 
 const getProfile = async (req, res) => {
     try {
-        console.log("Получен запрос на профиль от пользователя:", req.user?._id);
+        console.log("Получен запрос на профиль от пользователя:", req.user);
 
-        const user = await User.findById(req.user._id);
+        if (!req.user) {
+            return res.status(401).json({ message: "Unauthorized" });
+        }
+
+        const user = await User.findById(req.user._id).select("-password"); // Получаем пользователя по ID
         if (!user) return res.status(404).json({ message: "User not found" });
 
         res.json({
@@ -15,6 +19,7 @@ const getProfile = async (req, res) => {
             followingCount: user.followingCount
         });
     } catch (error) {
+        console.error("Ошибка при получении профиля:", error);
         res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -22,23 +27,32 @@ const getProfile = async (req, res) => {
 
 
 const updateProfile = async (req, res) => {
+    console.log("🔹 Запрос на обновление профиля:", req.body);
+    console.log("🔹 req.user:", req.user); // Проверяем, что `req.user` передан из `protect`
+
+    if (!req.user) {
+        return res.status(401).json({ message: "Unauthorized: No user data" });
+    }
+
+    const userId = req.user._id; // Используем `_id`, так как mongoose хранит ID так
+
     try {
-        const { username, bio, avatar } = req.body;
-        const updatedUser = await User.findByIdAndUpdate(
-            req.user.id,
-            { username, bio, avatar },
-            { new: true }
-        );
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
 
-        if (!updatedUser) return res.status(404).json({ message: "Пользователь не найден" });
+        // Обновляем данные профиля
+        user.username = req.body.username || user.username;
+        user.bio = req.body.bio || user.bio;
+        user.avatar = req.body.avatar || user.avatar;
 
-        res.json({
-            username: updatedUser.username,
-            bio: updatedUser.bio,
-            avatar: updatedUser.avatar
-        });
+        await user.save();
+
+        res.json({ message: "Profile updated successfully", user });
     } catch (error) {
-        res.status(500).json({ message: "Ошибка при обновлении профиля" });
+        console.error("❌ Ошибка при обновлении профиля:", error);
+        res.status(500).json({ message: "Failed to update profile" });
     }
 };
 

@@ -4,7 +4,7 @@ import SideMenu from "../sideMenu/sideMenu.tsx";
 const Layout = () => {
     const location = useLocation();
 
-    const showSideMenu = ["/home", "/profile", "/search", "/explore", "/create", "/notifications", "/messages"].includes(location.pathname);
+    const showSideMenu = ["/home", "/profile", "/search", "/explore", "/create", "/notifications", "/messages", "/edit-profile"].includes(location.pathname);
 
     return (
        <div>
