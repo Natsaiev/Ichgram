@@ -3,7 +3,7 @@ import {getProfile, updateProfile} from "../controllers/userController.js";
 import {createPost, getUserPosts, updatePost, deletePost} from "../controllers/postController.js";
 import {getUserByUsername} from "../controllers/searchUserController.js";
 import {followUser, unfollowUser} from "../controllers/followerController.js";
-import {addComment, likeComment, replyToComment} from "../controllers/commentController.js";
+import {addComment, addReply, toggleCommentLike, getCommentsForPost, getLikesForComment} from "../controllers/commentController.js";
 
 
 const router = express.Router();
@@ -29,10 +29,11 @@ router.put("/follow", followUser);
 router.put("/unfollow", unfollowUser);
 
 
-router.post("/comment", addComment);
-router.post("/comment/like", likeComment);
-router.post("/comment/reply", replyToComment);
-
+router.post("/comments", addComment);
+router.put("/comments/:commentId/like", toggleCommentLike);
+router.post("/comments/:commentId/replies", addReply);
+router.get("/comments/:postId", getCommentsForPost);
+router.get("/comments/:commentId/likes", getLikesForComment);
 
 // router.get('/profile', (req, res) => {
 //

@@ -11,24 +11,13 @@ const addComment = async (req, res) => {
     }
 
     try {
-        // Создаем новый комментарий
         const newComment = new Comment({
             postId,
             text,
-            userId,  // userId из токена
+            userId,  // Убедись, что userId здесь
         });
 
-        // Сохраняем новый комментарий в коллекцию
         await newComment.save();
-
-        // Обновляем пост, добавляем новый комментарий в массив comments
-        await Post.findByIdAndUpdate(
-            postId,
-            { $push: { comments: newComment._id } },  // Добавляем ID нового комментария в массив comments
-            { new: true }  // Возвращаем обновленный пост
-        );
-
-        // Возвращаем успешный ответ
         res.status(201).json(newComment);
     } catch (error) {
         console.error(error);
