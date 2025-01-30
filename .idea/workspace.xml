@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2413cb54-1a63-4323-9238-1b4911f66d92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EditProfilePage/EditProfilePage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EditProfilePage/EditProfilePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/postController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProfileSettingsPage/ProfileSettingsPage.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProfileSettingsPage/ProfileSettingsPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +138,7 @@
       <workItem from="1737214683518" duration="25477000" />
       <workItem from="1737378033570" duration="58206000" />
       <workItem from="1738095572001" duration="14074000" />
-      <workItem from="1738177805801" duration="23981000" />
+      <workItem from="1738177805801" duration="28169000" />
     </task>
     <servers />
   </component>

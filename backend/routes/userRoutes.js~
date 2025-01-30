@@ -1,6 +1,6 @@
 import express from "express";
 import {getProfile, updateProfile} from "../controllers/userController.js";
-import {createPost, getUserPosts, updatePost, deletePost} from "../controllers/postController.js";
+import {createPost, getUserPosts} from "../controllers/postController.js";
 
 
 const router = express.Router();
@@ -12,8 +12,6 @@ router.put("/profile", updateProfile);
 
 router.post("/create", createPost);
 router.get("/posts", getUserPosts);
-router.put("/posts/:id", updatePost);
-router.delete("/posts/:id", deletePost);
 
 // router.get('/profile', (req, res) => {
 //
