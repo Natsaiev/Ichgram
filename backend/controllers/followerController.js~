@@ -1,0 +1,77 @@
+import User from "../models/User.js";
+
+const followUser = async (req, res) => {
+    const { userId } = req.body;
+
+    if (!userId) {
+        return res.status(400).json({ message: "User ID is required" });
+    }
+
+    try {
+        // Находим текущего пользователя
+        const currentUser = await User.findById(req.user._id);
+
+        if (!currentUser) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Проверяем, подписан ли уже текущий пользователь на указанного пользователя
+        if (currentUser.following.includes(userId)) {
+            return res.status(400).json({ message: "You are already following this user" });
+        }
+
+        // Добавляем пользователя в список подписок
+        currentUser.following.push(userId);
+        // Добавляем текущего пользователя в список подписчиков другого пользователя
+        await currentUser.save();
+
+        // Обновляем количество подписок у текущего пользователя
+        await User.findByIdAndUpdate(req.user._id, { $inc: { followingCount: 1 } });
+        // Обновляем количество подписчиков у другого пользователя
+        await User.findByIdAndUpdate(userId, { $inc: { followersCount: 1 } });
+
+        res.status(200).json({ message: "User followed successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Server error" });
+    }
+};
+
+const unfollowUser = async (req, res) => {
+    const { userId } = req.body;
+
+    if (!userId) {
+        return res.status(400).json({ message: "User ID is required" });
+    }
+
+    try {
+        // Находим текущего пользователя
+        const currentUser = await User.findById(req.user._id);
+
+        if (!currentUser) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Проверяем, подписан ли текущий пользователь на указанного пользователя
+        if (!currentUser.following.includes(userId)) {
+            return res.status(400).json({ message: "You are not following this user" });
+        }
+
+        // Удаляем пользователя из списка подписок
+        currentUser.following = currentUser.following.filter(following => following.toString() !== userId);
+        // Удаляем текущего пользователя из списка подписчиков другого пользователя
+        await currentUser.save();
+
+        // Обновляем количество подписок у текущего пользователя
+        await User.findByIdAndUpdate(req.user._id, { $inc: { followingCount: -1 } });
+        // Обновляем количество подписчиков у другого пользователя
+        await User.findByIdAndUpdate(userId, { $inc: { followersCount: -1 } });
+
+        res.status(200).json({ message: "User unfollowed successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Server error" });
+    }
+};
+
+export { followUser, unfollowUser };

@@ -40,6 +40,14 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
+    following: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }],
+    followers: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }],
 });
 
 
