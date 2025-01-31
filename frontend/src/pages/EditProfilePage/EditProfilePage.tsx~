@@ -2,7 +2,7 @@ import { useState } from "react";
 import { $api } from "../../api/api.tsx";
 import styles from "./EditProfilePage.module.css";
 
-const EditProfileForm = ({ userProfile, onSubmit }) => {
+const EditProfilePage = ({ userProfile, onSubmit }) => {
     const [username, setUsername] = useState(userProfile?.username || "");
     const [bio, setBio] = useState(userProfile?.bio || "");
     const [avatar, setAvatar] = useState(userProfile?.avatar || "");
@@ -29,7 +29,7 @@ const EditProfileForm = ({ userProfile, onSubmit }) => {
         setIsLoading(true);
 
         try {
-            // Собираем только измененные данные
+
             const formData = {};
 
             if (username && username !== userProfile?.username) {
@@ -51,7 +51,7 @@ const EditProfileForm = ({ userProfile, onSubmit }) => {
             console.log(response.data);
 
             onSubmit(response.data); // Обновляем данные на родительском компоненте
-            
+
         } catch (error) {
             console.error("Ошибка при обновлении профиля:", error);
         } finally {
@@ -109,4 +109,4 @@ const EditProfileForm = ({ userProfile, onSubmit }) => {
     );
 };
 
-export default EditProfileForm;
+export default EditProfilePage;

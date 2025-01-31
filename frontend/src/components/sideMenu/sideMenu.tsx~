@@ -16,9 +16,10 @@ import profile from "../../assets/profile/profile.svg";
 import profile_fill from "../../assets/profile/profile.fill.svg";
 import search from "../../assets/search/search.svg";
 import search_fill from "../../assets/search/search_fill.svg";
+import CreatePostModal from "../CreatePostModal/CreatePostModal";
 
 const menuItems = [
-    {id:1, icon: home, activeIcon: home_fill, link: "/home", label: "Home"},
+    {id:1, icon: home, activeIcon: home_fill, link: "/", label: "Home"},
     {id:2, icon: search, activeIcon: search_fill, link: "/search", label: "Search"},
     {id:3, icon: explore, activeIcon: explore_fill, link: "/explore", label: "Explore"},
     {id:4, icon: create, activeIcon: create_fill, link: "/create", label: "Create"},
@@ -27,7 +28,7 @@ const menuItems = [
     {id:7, icon: profile, activeIcon: profile_fill, link: "/profile", label: "Profile"},
 ];
 
-const SideMenu = () => {
+const SideMenu = ({ openCreatePostModal }) => {
     const location = useLocation();
     const [showTopMenu, setShowTopMenu] = useState(true);
 
@@ -65,7 +66,6 @@ const SideMenu = () => {
             <nav className={styles.sideMenu}>
                 <img src={logo} alt="Logo" className={styles.logo} />
                 {menuItems.map((item) => (
-                    // Пропускаем элементы для сообщений и уведомлений на мобильных устройствах
                     (item.label !== "Notifications" && item.label !== "Messages") && (
                         <Link
                             key={item.id}
@@ -80,6 +80,11 @@ const SideMenu = () => {
                         </Link>
                     )
                 ))}
+                {/* Кнопка создания поста */}
+                <button onClick={openCreatePostModal} className={styles.createButton}>
+                    <img src={create} alt="Create" />
+                    <span>Create</span>
+                </button>
             </nav>
         </>
     );

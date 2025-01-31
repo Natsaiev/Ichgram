@@ -1,7 +1,7 @@
 import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 
-// Регистрация пользователя
+
 const registerUser = async (req, res) => {
     const { username, email, fullName, password } = req.body;
     console.log("Received data for registration:", req.body);
@@ -26,16 +26,16 @@ const registerUser = async (req, res) => {
             password
         });
 
-        // Сохранение нового пользователя в базе данных
+
         await newUser.save();
         console.log("User saved:", newUser);
 
-        // Создание токена
+
         const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
             expiresIn: '1h',
         });
 
-        // Отправка ответа с токеном и данными пользователя
+
         res.status(201).json({
             token,
             user: {
@@ -52,11 +52,10 @@ const registerUser = async (req, res) => {
     }
 };
 
-// Логин пользователя
+
 const loginUser = async (req, res) => {
-    //
     console.log(req.body);
-    //
+
     const { usernameOrEmail, password } = req.body;
 
     try {

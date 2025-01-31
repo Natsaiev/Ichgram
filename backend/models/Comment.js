@@ -10,7 +10,7 @@ const commentSchema = new mongoose.Schema(
             {
                 userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
                 text: { type: String, required: true },
-                likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }], // Лайки к ответам
+                likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
                 createdAt: { type: Date, default: Date.now },
             },
         ],

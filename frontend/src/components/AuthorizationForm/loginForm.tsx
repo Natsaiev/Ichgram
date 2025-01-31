@@ -26,7 +26,7 @@ const LoginForm = () => {
         try {
             const response = await $api.post("/api/auth/login", userData);
             localStorage.setItem("token", response.data.token);
-            navigate("/"); // Перенаправление на главную страницу
+            navigate("/profile");
         } catch (error: any) {
             setError(error.response?.data?.message || "Login failed");
         }

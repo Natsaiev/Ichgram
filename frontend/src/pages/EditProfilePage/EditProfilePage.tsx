@@ -20,7 +20,7 @@ const EditProfilePage = ({ userProfile, onSubmit }) => {
     };
 
     const handleAvatarClick = () => {
-        // Инициируем клик по скрытому input
+
         document.getElementById("avatarInput")?.click();
     };
 
@@ -29,7 +29,7 @@ const EditProfilePage = ({ userProfile, onSubmit }) => {
         setIsLoading(true);
 
         try {
-            // Собираем только измененные данные
+
             const formData = {};
 
             if (username && username !== userProfile?.username) {
@@ -44,13 +44,13 @@ const EditProfilePage = ({ userProfile, onSubmit }) => {
 
             if (Object.keys(formData).length === 0) {
                 console.log("Нет изменений для обновления.");
-                return; // Не отправляем запрос, если нет изменений
+                return;
             }
 
             const response = await $api.put("/api/user/profile", formData);
             console.log(response.data);
 
-            onSubmit(response.data); // Обновляем данные на родительском компоненте
+            onSubmit(response.data);
 
         } catch (error) {
             console.error("Ошибка при обновлении профиля:", error);

@@ -1,34 +1,33 @@
 import Comment from "../models/Comment.js";
 import Post from "../models/Post.js";
-import mongoose from "mongoose";
 
 const addComment = async (req, res) => {
     const { postId, text } = req.body;
-    const userId = req.user._id;  // Получаем userId из токена
+    const userId = req.user._id;
 
     if (!postId || !text) {
         return res.status(400).json({ message: 'PostId and text are required' });
     }
 
     try {
-        // Создаем новый комментарий
+
         const newComment = new Comment({
             postId,
             text,
-            userId,  // userId из токена
+            userId,
         });
 
-        // Сохраняем новый комментарий в коллекцию
+
         await newComment.save();
 
-        // Обновляем пост, добавляем новый комментарий в массив comments
+
         await Post.findByIdAndUpdate(
             postId,
-            { $push: { comments: newComment._id } },  // Добавляем ID нового комментария в массив comments
-            { new: true }  // Возвращаем обновленный пост
+            { $push: { comments: newComment._id } },
+            { new: true }
         );
 
-        // Возвращаем успешный ответ
+
         res.status(201).json(newComment);
     } catch (error) {
         console.error(error);
@@ -42,7 +41,7 @@ const toggleCommentLike = async (req, res) => {
         const userId = req.user.id;
 
         const comment = await Comment.findById(commentId);
-        if (!comment) return res.status(404).json({ message: "Комментарий не найден" });
+        if (!comment) return res.status(404).json({ message: "Comment not found" });
 
         const update = comment.likes.includes(userId)
             ? { $pull: { likes: userId } }
@@ -52,10 +51,10 @@ const toggleCommentLike = async (req, res) => {
 
         res.json({
             likes: updatedComment.likes.length,
-            message: comment.likes.includes(userId) ? "Лайк убран" : "Лайк добавлен",
+            message: comment.likes.includes(userId) ? "Like removed" : "Like added",
         });
     } catch (error) {
-        res.status(500).json({ message: "Ошибка при лайке комментария" });
+        res.status(500).json({ message: "error while liking comment" });
     }
 };
 
@@ -84,7 +83,7 @@ const addReply = async (req, res) => {
         const userId = req.user.id;
 
         const comment = await Comment.findById(commentId);
-        if (!comment) return res.status(404).json({ message: "Комментарий не найден" });
+        if (!comment) return res.status(404).json({ message: "Comment not found" });
 
         const reply = { userId, text, likes: [], createdAt: new Date() };
         comment.replies.push(reply);
@@ -92,7 +91,7 @@ const addReply = async (req, res) => {
 
         res.status(201).json(reply);
     } catch (error) {
-        res.status(500).json({ message: "Ошибка при добавлении ответа" });
+        res.status(500).json({ message: "error while adding reply" });
     }
 };
 
@@ -100,9 +99,17 @@ const getCommentsForPost = async (req, res) => {
     try {
         const { postId } = req.params;
 
-        const comments = await Comment.find({ post: postId })
-            .populate("user", "username avatar")  // Заполняем информацию о пользователе
-            .populate("replies");
+
+        const post = await Post.findById(postId);
+        if (!post) {
+            return res.status(404).json({ message: "Post not found" });
+        }
+
+
+        const comments = await Comment.find({ postId })
+            .populate("userId", "username avatar")
+            .populate("replies.userId", "username avatar")
+            .sort({ createdAt: -1 });
 
         res.status(200).json(comments);
     } catch (error) {

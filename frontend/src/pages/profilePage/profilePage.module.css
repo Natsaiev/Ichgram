@@ -1,11 +1,17 @@
 .profilePage {
     display: flex;
-    gap: 100px;
     max-width: 40%;
     margin: 50px auto;
     text-align: center;
     font-family: Arial, sans-serif;
     color: #000;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    gap: 50px;
+
 }
 
 .profileInfo {
@@ -77,7 +83,7 @@
     margin-top: 20px;
 }
 
-/* Адаптация под 1440px */
+
 @media (max-width: 1440px) {
     .profilePage {
         max-width: 50%;
@@ -104,7 +110,7 @@
     }
 }
 
-/* Адаптация под 1024px */
+
 @media (max-width: 1024px) {
     .profilePage {
         max-width: 40%;
@@ -125,6 +131,12 @@
         text-align: center;
     }
 
+    bioContainer p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+
     .avatar {
         max-width: 150px;
     }
@@ -139,12 +151,17 @@
     }
 }
 
-/* Адаптация под 768px */
+
 @media (max-width: 768px) {
     .profilePage {
         max-width: 90%;
         gap: 10px;
         flex-direction: column;
+
+    }
+
+    .header{
+        gap: 10px;
 
     }
 
@@ -188,7 +205,6 @@
     }
 }
 
-/* Адаптация под 480px */
 @media (max-width: 480px) {
     .profilePage {
         max-width: 95%;
@@ -198,10 +214,11 @@
         gap: 20px;
     }
 
+
     .countContainer {
         gap: 10px;
         p{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 
@@ -214,7 +231,7 @@
     }
 
     .username {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .editButton {
@@ -223,7 +240,7 @@
     }
 }
 
-/* Адаптация под 320px */
+
 @media (max-width: 320px) {
     .profilePage {
         max-width: 100%;
@@ -237,9 +254,7 @@
 
     .countContainer {
         gap: 5px;
-        p{
-            font-size: 1rem;
-        }
+
     }
 
     .bioContainer {
@@ -247,6 +262,10 @@
 
     }
 
+    .bioContainer p {
+        font-size: 1rem;
+
+    }
     .avatar {
         max-width: 80px;
     }

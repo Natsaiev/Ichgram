@@ -8,7 +8,7 @@ const getProfile = async (req, res) => {
             return res.status(401).json({ message: "Unauthorized" });
         }
 
-        const user = await User.findById(req.user._id).select("-password"); // Получаем пользователя по ID
+        const user = await User.findById(req.user._id).select("-password");
         if (!user) return res.status(404).json({ message: "User not found" });
 
         res.json({
@@ -27,14 +27,14 @@ const getProfile = async (req, res) => {
 
 
 const updateProfile = async (req, res) => {
-    console.log("🔹 Запрос на обновление профиля:", req.body);
-    console.log("🔹 req.user:", req.user); // Проверяем, что `req.user` передан из `protect`
+    console.log(" Запрос на обновление профиля:", req.body);
+    console.log(" req.user:", req.user);
 
     if (!req.user) {
         return res.status(401).json({ message: "Unauthorized: No user data" });
     }
 
-    const userId = req.user._id; // Используем `_id`, так как mongoose хранит ID так
+    const userId = req.user._id;
 
     try {
         const user = await User.findById(userId);
@@ -42,7 +42,7 @@ const updateProfile = async (req, res) => {
             return res.status(404).json({ message: "User not found" });
         }
 
-        // Обновляем данные профиля
+
         user.username = req.body.username || user.username;
         user.bio = req.body.bio || user.bio;
         user.avatar = req.body.avatar || user.avatar;
@@ -51,7 +51,7 @@ const updateProfile = async (req, res) => {
 
         res.json({ message: "Profile updated successfully", user });
     } catch (error) {
-        console.error("❌ Ошибка при обновлении профиля:", error);
+        console.error(" Ошибка при обновлении профиля:", error);
         res.status(500).json({ message: "Failed to update profile" });
     }
 };

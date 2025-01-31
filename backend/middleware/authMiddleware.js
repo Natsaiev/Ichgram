@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
 const protect = async (req, res, next) => {
-    console.log("🔹 JWT_SECRET из .env:", process.env.JWT_SECRET);
+    console.log("JWT_SECRET из .env:", process.env.JWT_SECRET);
     console.log("Request Headers:", req.headers);
 
     let token;

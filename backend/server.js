@@ -6,6 +6,8 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/userRoutes.js";
 import protect from "./middleware/authMiddleware.js";
 
+
+
 const PORT = process.env.PORT || 3000;
 const app = express();
 

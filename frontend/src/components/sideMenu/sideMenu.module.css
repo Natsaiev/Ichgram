@@ -17,7 +17,7 @@
     opacity: 1;
 }
 
-/* Боковое меню (ПК) / Нижнее меню (мобильное) */
+
 .sideMenu {
     position: fixed;
     bottom: 0;
@@ -49,7 +49,7 @@
     display: none;
 }
 
-/* Для ПК */
+
 @media (min-width: 769px) {
     .sideMenu {
         flex-direction: column;
@@ -79,7 +79,7 @@
     }
 }
 
-/* Для мобильных устройств */
+
 @media (max-width: 768px) {
     .topMenu {
         position: fixed;
@@ -106,13 +106,13 @@
     }
 
     .menuItem {
-        display: flex; /* Показывать иконки */
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .menuItem span {
-        display: none; /* Скрыть текст */
+        display: none;
     }
 
     .menuItem img {

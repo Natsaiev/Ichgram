@@ -5,10 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2413cb54-1a63-4323-9238-1b4911f66d92" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/CreatePostModal/CreatePostModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/profileUserPosts/profileUserPosts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/profileUserPosts/profileUserPosts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/customItems/LikeButton/LikeButton.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/customItems/LikeButton/LikeButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/customItems/MessageButton/MessageButton.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/customItems/MessageButton/MessageButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/authControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/authControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/commentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/commentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/postController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/postController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/searchUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/searchUserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/models/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/api.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/loginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AuthorizationForm/loginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute/ProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute/ProtectedRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/sideMenu/sideMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/sideMenu/sideMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/sideMenu/sideMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/sideMenu/sideMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/customItems/customInput/CustomInput.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CreatePostModal/CreatePostModal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/customItems/customInput/CustomInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/EditProfilePage/EditProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/EditProfilePage/EditProfilePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/loginPage/loginPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/loginPage/loginPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/profilePage/profilePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,11 +134,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Ichgram\frontend\src\pages" />
+      <recent name="H:\Ichgram\frontend\src\customItems\LikeButton" />
       <recent name="H:\Ichgram\frontend\public" />
+      <recent name="H:\Ichgram\frontend\src\pages" />
       <recent name="H:\Ichgram\frontend\src\assets\notifications" />
       <recent name="H:\Ichgram\frontend\src\assets\messages" />
-      <recent name="H:\Ichgram\frontend\src\assets\search" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -138,7 +168,7 @@
       <workItem from="1737214683518" duration="25477000" />
       <workItem from="1737378033570" duration="58206000" />
       <workItem from="1738095572001" duration="14074000" />
-      <workItem from="1738177805801" duration="38712000" />
+      <workItem from="1738177805801" duration="97017000" />
     </task>
     <servers />
   </component>

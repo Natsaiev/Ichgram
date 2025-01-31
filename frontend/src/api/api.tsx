@@ -17,8 +17,8 @@ $api.interceptors.response.use(
     (response) => response,
     (error) => {
         if (error.response?.status === 401 && error.response.data.message === 'Token has expired') {
-            localStorage.removeItem('token'); // Удаляем токен
-            window.location.href = '/login'; // Перенаправляем на логин
+            localStorage.removeItem('token');
+            window.location.href = '/login';
         }
         return Promise.reject(error);
     }

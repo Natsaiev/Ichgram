@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getUserProfile } from "../../api/api";
 import styles from './ProfilePage.module.css';
+import UserPosts from "../../components/profileUserPosts/profileUserPosts";
 
 const ProfilePage = () => {
     const [userProfile, setUserProfile] = useState<any>(null);
@@ -29,6 +30,7 @@ const ProfilePage = () => {
 
     return (
         <div className={styles.profilePage}>
+            <div className={styles.header}>
             <div className={styles.imgContainer}>
                 <img src={userProfile.avatar} alt="Avatar" className={styles.avatar} />
             </div>
@@ -40,14 +42,16 @@ const ProfilePage = () => {
                     </Link>
                 </div>
                 <div className={styles.countContainer}>
+                    <p> {userProfile.postsCount} Posts</p>
                     <p> {userProfile.followersCount} Followers</p>
                     <p> {userProfile.followingCount} Following</p>
                 </div>
                 <div className={styles.bioContainer}>
                     <p>{userProfile.bio}</p>
                 </div>
-
             </div>
+            </div>
+            <UserPosts />
         </div>
     );
 };

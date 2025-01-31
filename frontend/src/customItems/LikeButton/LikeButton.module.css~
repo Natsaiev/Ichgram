@@ -1,0 +1,23 @@
+.likeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 0;
+    border-bottom: 1px solid #ddd;
+    margin:0;
+}
+
+.likeButton {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: color 0.2s ease-in-out;
+    padding: 5px;
+}
+
+.liked {
+    color: #ff3040;
+}

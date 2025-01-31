@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 50px;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 5%;
     }
 
 .left{
@@ -47,4 +47,9 @@
 
 .loginImage{
     width: 100%;
+}
+
+@media (max-width: 1440px) {
+    
+
 }
